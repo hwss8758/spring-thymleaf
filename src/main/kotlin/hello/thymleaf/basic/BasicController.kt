@@ -59,4 +59,10 @@ class BasicController {
         model.addAttribute("param2", "data2")
         return "basic/link"
     }
+
+    @GetMapping("/literal")
+    fun literal(model: Model): String {
+        model.addAttribute("data", "Spring!")
+        return "basic/literal"
+    }
 }

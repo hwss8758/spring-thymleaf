@@ -65,4 +65,11 @@ class BasicController {
         model.addAttribute("data", "Spring!")
         return "basic/literal"
     }
+
+    @GetMapping("/operation")
+    fun operation(model: Model): String {
+        model.addAttribute("nullData", null)
+        model.addAttribute("data", "Spring!")
+        return "basic/operation"
+    }
 }

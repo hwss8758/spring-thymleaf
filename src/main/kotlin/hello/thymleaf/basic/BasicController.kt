@@ -20,4 +20,22 @@ class BasicController {
         model.addAttribute("data", "Hello <b>Spring!</b>")
         return "basic/text-unescaped"
     }
+
+    @GetMapping("/variable")
+    fun variable(model: Model): String {
+        val userA = User("userA", 10)
+        val userB = User("userB", 20)
+
+        val list = listOf<User>(userA, userB)
+        val map = mapOf<String, User>(
+            "userA" to userA,
+            "userB" to userB
+        )
+
+        model.addAttribute("user", userA)
+        model.addAttribute("users", list)
+        model.addAttribute("userMap", map)
+
+        return "basic/variable"
+    }
 }

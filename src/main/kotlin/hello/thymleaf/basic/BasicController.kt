@@ -75,4 +75,20 @@ class BasicController {
 
     @GetMapping("/attribute")
     fun attribute() = "basic/attribute"
+
+    @GetMapping("/each")
+    fun each(model: Model): String {
+        addUsers(model)
+        return "basic/each"
+    }
+
+    private fun addUsers(model: Model) {
+
+        val list = mutableListOf<User>()
+        list.add(User("userA", 10))
+        list.add(User("userB", 20))
+        list.add(User("userC", 30))
+
+        model.addAttribute("users", list)
+    }
 }

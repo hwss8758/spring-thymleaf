@@ -72,4 +72,7 @@ class BasicController {
         model.addAttribute("data", "Spring!")
         return "basic/operation"
     }
+
+    @GetMapping("/attribute")
+    fun attribute() = "basic/attribute"
 }

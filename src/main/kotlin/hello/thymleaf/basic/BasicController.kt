@@ -91,4 +91,10 @@ class BasicController {
 
         model.addAttribute("users", list)
     }
+
+    @GetMapping("/condition")
+    fun condition(model: Model): String {
+        addUsers(model)
+        return "basic/condition"
+    }
 }

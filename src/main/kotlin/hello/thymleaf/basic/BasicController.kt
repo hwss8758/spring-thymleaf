@@ -82,6 +82,12 @@ class BasicController {
         return "basic/each"
     }
 
+    @GetMapping("/comments")
+    fun comments(model: Model): String {
+        model.addAttribute("data", "Spring!")
+        return "basic/comments"
+    }
+
     private fun addUsers(model: Model) {
 
         val list = mutableListOf<User>()

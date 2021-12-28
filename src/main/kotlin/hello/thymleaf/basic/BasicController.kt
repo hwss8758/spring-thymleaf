@@ -109,4 +109,11 @@ class BasicController {
         addUsers(model)
         return "basic/block"
     }
+
+    @GetMapping("/javascript")
+    fun javascript(model: Model): String {
+        model.addAttribute("user", User("userD", 10))
+        addUsers(model)
+        return "basic/javascript"
+    }
 }

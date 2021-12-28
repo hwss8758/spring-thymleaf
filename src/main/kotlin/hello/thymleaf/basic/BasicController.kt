@@ -103,4 +103,10 @@ class BasicController {
         addUsers(model)
         return "basic/condition"
     }
+
+    @GetMapping("/block")
+    fun block(model: Model): String {
+        addUsers(model)
+        return "basic/block"
+    }
 }

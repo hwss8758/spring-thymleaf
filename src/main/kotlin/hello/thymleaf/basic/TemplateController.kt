@@ -13,4 +13,9 @@ class TemplateController {
 
     @GetMapping("/layout")
     fun layout() = "template/layout/layoutMain"
+
+    @GetMapping("/layoutExtend")
+    fun layoutExtends(): String {
+        return "template/layoutExtend/layoutExtendMain"
+    }
 }
